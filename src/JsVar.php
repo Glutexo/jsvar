@@ -1,10 +1,9 @@
 <?php
 /**
-* Umozni vytvorit javascriptovy objekt obsahujici nejen skalarni hodnoty, ale
-* take vyrazy, funkce a vubec cokoliv, co JavaScript umi. Prevede-li se na re-
-* tezec, vrati vystup obdobny jako dela json_encode. Jediny rozdil je, ze je-li
-* prvek pole JsRawVarClass, vlozi ho do objektu tak, jak lezi a bezi, bez jake-
-* hokoliv escapovani.
+* Allows creating JS object with not only scalar values, but with expressions,
+* functions etc. When used as a string, it converts in a similar fashion as
+* PHP’s json_encode function with one difference: When a JsRawVar is encoun-
+* tered, it’s put into the object diretly without any escaping/encoding.
 */
 class JsVar extends JsRawVar {
 	public $value = array();
